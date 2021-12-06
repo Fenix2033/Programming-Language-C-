@@ -1,0 +1,1 @@
+In Xcode go to Product > Scheme > Edit Scheme > Run test (on the right) > Options (middle top)

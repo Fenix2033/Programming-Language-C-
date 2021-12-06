@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MineTile.qml</file>
+        <file>images/mine.jpg</file>
+        <file>images/target.png</file>
+        <file>MineField.qml</file>
+        <file>GameEnd.qml</file>
+        <file>StatusBar.qml</file>
+    </qresource>
+</RCC>
