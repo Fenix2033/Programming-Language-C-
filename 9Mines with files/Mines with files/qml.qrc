@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MineTile.qml</file>
+        <file>images/mine.png</file>
+        <file>MineField.qml</file>
+        <file>save.xml</file>
+    </qresource>
+</RCC>
