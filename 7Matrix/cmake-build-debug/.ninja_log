@@ -1,0 +1,5 @@
+# ninja log v5
+0	801	1638986125165511122	CMakeFiles/7Matrix.dir/TestSuite/Test.cpp.o	da0a3ae265231edb
+1	1078	1638986125441508656	CMakeFiles/7Matrix.dir/main.cpp.o	f8396ed7ab4baae5
+1	1119	1638986125485508264	CMakeFiles/7Matrix.dir/TestSuite/Suite.cpp.o	7f62aa8685b50058
+3	1140	1638986125505508085	CMakeFiles/7Matrix.dir/MatrixTest.cpp.o	34136c1c89b3c207
