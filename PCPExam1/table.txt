@@ -1,0 +1,5 @@
+ID                     | 0                               | 1                               
+name                   | one                    | two                    
+content                | one           | two           
+duration  [h]            | 1 hours                       | 1 hours                       
+number of participants | 0                              | 0                              
