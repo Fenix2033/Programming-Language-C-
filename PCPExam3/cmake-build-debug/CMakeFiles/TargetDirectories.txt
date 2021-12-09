@@ -1,3 +1,0 @@
-/Users/ivo/OneDrive - Mendelova univerzita v Brně/teach/CPP/zkousky/zkouska-ZS2021-3T/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/ivo/OneDrive - Mendelova univerzita v Brně/teach/CPP/zkousky/zkouska-ZS2021-3T/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/ivo/OneDrive - Mendelova univerzita v Brně/teach/CPP/zkousky/zkouska-ZS2021-3T/cmake-build-debug/CMakeFiles/zkouska_ZS2021_1T.dir
