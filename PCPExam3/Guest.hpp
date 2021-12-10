@@ -11,6 +11,8 @@
 
 #include <string>
 #include <vector>
+#include <cassert>
+#include <regex>
 
 /// 6 bodu
 class Guest {
@@ -34,7 +36,11 @@ public:
     /// Zajistete odchyceni nasledujicich formatu:
     /// covid19, covid2019, covid 19, covid 2019 ... a to same s ruznou velikosti pismen
     Guest(long id, std::string name, int age, std::string doctorsMessage);
-    
+
+    long getID() const;
+    std::string getName() const;
+    int getAge(int age) const;
+    std::string getDoctorMessage(std::string doctorMessage) const;
 };
 
 #endif /* Document_hpp */

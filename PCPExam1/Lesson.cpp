@@ -64,6 +64,25 @@ int Lesson::getCountParticipants() const{
     return participants.size();
 }
 
+std::vector<Participant> Lesson::getParticipant() const{
+    return participants;
+}
+
 void Lesson::addParticipants(Participant participant){
     participants.push_back(participant);
+}
+
+int Lesson::getCountMale() const{
+    int male = 0;
+    auto gender = Gender::male;
+    for(int i = 0; i < participants.size(); i++){
+        if (gender == Gender::male) male++;
+    }
+}
+
+int Lesson::getCountFemale() const{
+    int female = 0;
+    for(int i = 0; i < participants.size(); i++){
+        if (participants.at(i).gender == '1') female++;
+    }
 }

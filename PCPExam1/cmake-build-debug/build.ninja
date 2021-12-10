@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/cmake-build-debug/
+cmake_ninja_workdir = /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1 -B/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/cmake-build-debug
+  COMMAND = cd /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1 -B/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -72,46 +72,46 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_zkouska_ZS2021_1T: phony || CMakeFiles/zkouska_ZS2021_1T.dir
 
-build CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite/Suite.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/TestSuite/Suite.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
+build CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite/Suite.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/TestSuite/Suite.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
   DEP_FILE = CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite/Suite.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/TestSuite
+  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/TestSuite
   OBJECT_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   OBJECT_FILE_DIR = CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite
   TARGET_COMPILE_PDB = CMakeFiles/zkouska_ZS2021_1T.dir/
   TARGET_PDB = zkouska_ZS2021_1T.pdb
 
-build CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite/Test.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/TestSuite/Test.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
+build CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite/Test.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/TestSuite/Test.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
   DEP_FILE = CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite/Test.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/TestSuite
+  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/TestSuite
   OBJECT_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   OBJECT_FILE_DIR = CMakeFiles/zkouska_ZS2021_1T.dir/TestSuite
   TARGET_COMPILE_PDB = CMakeFiles/zkouska_ZS2021_1T.dir/
   TARGET_PDB = zkouska_ZS2021_1T.pdb
 
-build CMakeFiles/zkouska_ZS2021_1T.dir/Lesson.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/Lesson.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
+build CMakeFiles/zkouska_ZS2021_1T.dir/Lesson.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/Lesson.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
   DEP_FILE = CMakeFiles/zkouska_ZS2021_1T.dir/Lesson.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/TestSuite
+  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/TestSuite
   OBJECT_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   OBJECT_FILE_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   TARGET_COMPILE_PDB = CMakeFiles/zkouska_ZS2021_1T.dir/
   TARGET_PDB = zkouska_ZS2021_1T.pdb
 
-build CMakeFiles/zkouska_ZS2021_1T.dir/main.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/main.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
+build CMakeFiles/zkouska_ZS2021_1T.dir/main.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/main.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
   DEP_FILE = CMakeFiles/zkouska_ZS2021_1T.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/TestSuite
+  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/TestSuite
   OBJECT_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   OBJECT_FILE_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   TARGET_COMPILE_PDB = CMakeFiles/zkouska_ZS2021_1T.dir/
   TARGET_PDB = zkouska_ZS2021_1T.pdb
 
-build CMakeFiles/zkouska_ZS2021_1T.dir/YogaStudio.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/YogaStudio.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
+build CMakeFiles/zkouska_ZS2021_1T.dir/YogaStudio.cpp.o: CXX_COMPILER__zkouska_ZS2021_1T_Debug /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/YogaStudio.cpp || cmake_object_order_depends_target_zkouska_ZS2021_1T
   DEP_FILE = CMakeFiles/zkouska_ZS2021_1T.dir/YogaStudio.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/TestSuite
+  INCLUDES = -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/. -I/home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/TestSuite
   OBJECT_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   OBJECT_FILE_DIR = CMakeFiles/zkouska_ZS2021_1T.dir
   TARGET_COMPILE_PDB = CMakeFiles/zkouska_ZS2021_1T.dir/
@@ -143,7 +143,7 @@ build zkouska_ZS2021_1T: CXX_EXECUTABLE_LINKER__zkouska_ZS2021_1T_Debug CMakeFil
 # =============================================================================
 
 #############################################
-# Folder: /home/xkudla/Documents/Mendel/PCP/Zkouska/PCPExam1/cmake-build-debug
+# Folder: /home/xkudla/Documents/Mendel/PCP/CV/PCPExam1/cmake-build-debug
 
 build all: phony zkouska_ZS2021_1T
 

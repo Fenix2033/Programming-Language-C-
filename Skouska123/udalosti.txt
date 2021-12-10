@@ -1,0 +1,5 @@
+20100101 Q1 intrusion 10.3
+20100102 Q1 battery 11.3
+20111011 A21 intrusion 12.3
+20111012 Q1 intrusion 1.23
+20121012 Q1 intrusion 9.3

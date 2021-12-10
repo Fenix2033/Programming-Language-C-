@@ -13,12 +13,34 @@ class YogaStudioTest:public TestSuite::Test{
 public:
     // 4 body
     void testGetEmptyLessons(){
-        
+//        YogaStudio yoga;
+//        std::vector<Lesson> empty;
+//        Lesson lesson(0, "fsd", "fsd", 3600);
+//        Lesson lesson1(1, "fsd", "fsd", 3600);
+//        yoga.addLesson(lesson);
+//        yoga.addLesson(lesson1);
+//        empty.push_back(lesson);
+//        empty.push_back(lesson1);
+//        test_(yoga.getEmptyLessons() == empty);
     }
     
     // 4 body
     void testGetLessonsWithDurationInRange(){
-        
+        YogaStudio yoga;
+        long min = 1000;
+        long max = 2000;
+        test_(max > min);
+
+        Lesson lesson(0, "fsd", "fsd", 1500);
+        std::vector<Lesson> testL;
+        testL.push_back(lesson);
+        yoga.addLesson(lesson);
+//        test_(yoga.getLessonsWithDurationInRange(min, max) == lesson);
+
+//        min = 2000;
+//        max = 1000;
+//        test_(max > min);
+
     }
     
     // 4 body

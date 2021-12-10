@@ -1,0 +1,118 @@
+# depslib dependency file v1.0
+1326918731 source:c:\users\david\desktop\cpp2t\testsuite\test.cpp
+	"Test.h"
+	<iostream>
+	<typeinfo>
+
+1326918731 c:\users\david\desktop\cpp2t\testsuite\test.h
+	<string>
+	<iostream>
+	<cassert>
+
+1326918731 source:c:\users\david\desktop\cpp2t\main.cpp
+	"TestSuite/Suite.h"
+	"tst_priklad1.h"
+	"tst_priklad2.h"
+	"tst_priklad3.h"
+
+1326918731 c:\users\david\desktop\cpp2t\testsuite\suite.h
+	<vector>
+	<stdexcept>
+	"../TestSuite/Test.h"
+
+1326918731 c:\users\david\desktop\cpp2t\tst_priklad1.h
+	"TestSuite/Suite.h"
+	"TestSuite/Test.h"
+	"priklad1.h"
+
+1326919537 c:\users\david\desktop\cpp2t\priklad1.h
+	<iostream>
+	<fstream>
+	<stdexcept>
+	<vector>
+	<algorithm>
+
+1326918731 c:\users\david\desktop\cpp2t\tst_priklad2.h
+	"priklad2.h"
+
+1326919857 c:\users\david\desktop\cpp2t\priklad2.h
+	<iostream>
+
+1326918731 c:\users\david\desktop\cpp2t\tst_priklad3.h
+	"priklad3.h"
+
+1326919974 c:\users\david\desktop\cpp2t\priklad3.h
+	<iostream>
+
+1326920027 source:c:\users\david\desktop\cpp2t\priklad1.cpp
+
+1326920027 source:c:\users\david\desktop\cpp2t\priklad2.cpp
+
+1326920027 source:c:\users\david\desktop\cpp2t\priklad3.cpp
+
+1326918731 source:c:\users\david\desktop\cpp2t\testsuite\suite.cpp
+	"Suite.h"
+	<iostream>
+	<cassert>
+	<cstddef>
+
+1326918730 source:c:\users\erik\desktop\cpp2t\cpp2t\testsuite\test.cpp
+	"Test.h"
+	<iostream>
+	<typeinfo>
+
+1326918730 c:\users\erik\desktop\cpp2t\cpp2t\testsuite\test.h
+	<string>
+	<iostream>
+	<cassert>
+
+1326970198 source:c:\users\erik\desktop\cpp2t\cpp2t\main.cpp
+	"TestSuite/Suite.h"
+	"tst_priklad1.h"
+	"tst_priklad2.h"
+	"tst_priklad3.h"
+
+1326918730 c:\users\erik\desktop\cpp2t\cpp2t\testsuite\suite.h
+	<vector>
+	<stdexcept>
+	"../TestSuite/Test.h"
+
+1326918730 c:\users\erik\desktop\cpp2t\cpp2t\tst_priklad1.h
+	"TestSuite/Suite.h"
+	"TestSuite/Test.h"
+	"priklad1.h"
+
+1326919536 c:\users\erik\desktop\cpp2t\cpp2t\priklad1.h
+	<iostream>
+	<fstream>
+	<stdexcept>
+	<vector>
+	<algorithm>
+
+1326918730 c:\users\erik\desktop\cpp2t\cpp2t\tst_priklad2.h
+	"priklad2.h"
+
+1326919856 c:\users\erik\desktop\cpp2t\cpp2t\priklad2.h
+	<iostream>
+
+1326918730 c:\users\erik\desktop\cpp2t\cpp2t\tst_priklad3.h
+	"priklad3.h"
+
+1326919974 c:\users\erik\desktop\cpp2t\cpp2t\priklad3.h
+	<iostream>
+
+1326970225 source:c:\users\erik\desktop\cpp2t\cpp2t\priklad1.cpp
+	"priklad1.h"
+
+1326970198 source:c:\users\erik\desktop\cpp2t\cpp2t\priklad2.cpp
+	"priklad2.h"
+
+1326963064 source:c:\users\erik\desktop\cpp2t\cpp2t\priklad3.cpp
+	"priklad3.h"
+
+1326918730 source:c:\users\erik\desktop\cpp2t\cpp2t\testsuite\suite.cpp
+	"Suite.h"
+	<iostream>
+	<cassert>
+	<cstddef>
+

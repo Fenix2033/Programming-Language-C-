@@ -10,13 +10,21 @@ private:
     // 2 bod
     /// Overte, ze pri vytvoreni objektu Guest se spravnymi parametry se nevyhodi vyjimka.
     void testValidParameters(){
-        
+        Guest guest(0, "Tomas", 80, "Covid19");
+        test_(guest.getID() == 0);
+        test_(guest.getName() == "Tomas");
+        test_(guest.getAge(80) == 80);
+        test_(guest.getDoctorMessage("Covid19") == "Covid19");
     }
     
     // 2 bodu
     /// Overte, ze pri vytvoreni objektu Guest s nespravnymi parametry se vyhodi vyjimka.
     void testInvalidParameters(){
-        
+        Guest guest(-1, "", 0, "19");
+        test_(guest.getID() == -1);
+        test_(guest.getName() == "");
+        test_(guest.getAge(0) == 0);
+        test_(guest.getDoctorMessage("19") == "19");
     }
     
 public:

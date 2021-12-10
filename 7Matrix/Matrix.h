@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <stdexcept>
+#include <cassert>
 using std::vector;
 
 class Matrix{

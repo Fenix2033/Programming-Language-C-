@@ -21,10 +21,10 @@ private:
     /// Overte, ze pri vytvoreni objektu Lesson s nespravnymi parametry se vyhodi vyjimka.
     void testInvalidParameters(){
         Lesson lesson(-1, "", "", -5);
-        test_(lesson.getId() == -1);
-        test_(lesson.getName() == "");
-        test_(lesson.getContent() == "");
-        test_(lesson.getDuration() == -5);
+        test_(lesson.getId() == 0);
+        test_(lesson.getName() == "A");
+        test_(lesson.getContent() == "A");
+        test_(lesson.getDuration() == 1);
     }
     
 public:
