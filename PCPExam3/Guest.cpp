@@ -48,25 +48,25 @@ Guest::Guest(long id, std::string name, int age, std::string doctorsMessage){
 
 }
 
-long Guest::getID() const{
-    assert(this->id >= 0);
-    return this->id;
-}
+//long Guest::getID() const{
+//    assert(this->id >= 0);
+//    return this->id;
+//}
 
-std::string Guest::getName() const{
-    assert(this->name != "");
-    return this->name;
-}
+//std::string Guest::getName() const{
+//    assert(this->name != "");
+//    return this->name;
+//}
 
-int Guest::getAge(int age) const{
+//int Guest::getAge(int age) const{
 //    assert(age > 0);
-    return age;
-}
+//    return age;
+//}
 
-std::string Guest::getDoctorMessage(std::string doctorMessage) const{
+//bool Guest::getDoctorMessage(std::string doctorMessage) const{
 //    std::regex regular("^[a-zA-Z][0-9a-zA-Z]*$");
 //    bool reg;
 //    if (std::regex_match (doctorMessage, regular)) reg = true;
 //    assert (reg == true);
-//    return doctorMessage;
-}
+//    return reg;
+//}

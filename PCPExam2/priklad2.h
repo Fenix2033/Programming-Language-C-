@@ -36,7 +36,9 @@ protected:
     std::string m_name;
     /// zbrane: pomoci inteligentnich ukazatelu vyreste, aby se hrdinovi mohl predat mec nebo jina zbran do seznamu
     /// tato zbran se smaze az tehdy, kdyz ji hrdina i tem kdo ji vytvoril prestanou vyuzivat (3 body)
-    // ??? m_weapons;
+    std::vector<Weapon> m_weapons;
+    std::vector<Weapon>::iterator actWeapon;
+    int actWeaponIndex = 0;
 
 public:
     /// Konstruktor vytvarejici hrdinu. (2 body)
@@ -45,9 +47,8 @@ public:
     /// Destruktor (3 body)
     ~Hero();
 
-private:
     /// Pridani zbrane do seznamu zbrani  (4 bodu)
-    //void addWeapon(???);
+    void addWeapon(Weapon weapon);
 
     /// Vypise jmena zbrani na obrazovku (3 body)
     void printWeapons();
