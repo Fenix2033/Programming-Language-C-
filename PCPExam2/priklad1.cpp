@@ -14,14 +14,23 @@ void BallotList::loadFile(const std::string fileName) throw (std::invalid_argume
         std::string tVotes;
         std::string sState;
         std::string tData;
-        std::string sCandidate;
-        while (in.eof()) {
-            in >> tVotes >> sState >> tData >> sCandidate;
-            insertBallot(sState, sCandidate, tData, tVotes);
+        std::string sPerson;
+        State tState;
+        Candidate tPerson;
+        while (in >> tVotes >> sState >> tData >> sPerson) {
+            if (sState == "Accepted") tState = State::Accepted;
+            if (sState == "Invalid") tState = State::Invalid;
+            if (sState == "Damaged") tState = State::Damaged;
+            if (sState == "Faked") tState = State::Faked;
+            if (sPerson == "DonaldTrump") tPerson = Candidate::DonaldTrump;
+            if (sPerson == "JoeBiden") tPerson = Candidate::JoeBiden;
+            m_orders.insert(std::pair<std::string, Ballot>(tVotes, Ballot{tState, tPerson, tData}));
+//            insertBallot(sState, sCandidate, tData, tVotes);
         }
     }else{
         throw std::domain_error("soubor neotevren");
     }
+
     in.close();
 }
 
@@ -55,19 +64,15 @@ std::map<Candidate, long> BallotList::getBallotsCount(const State state){
     long pocetBaiden = 0;
     long pocetTrump = 0;
 
-//    auto pocet = std::for_each(m_orders.begin(), m_orders.end(),
-//                                [state, &pocetBaiden, &pocetTrump](Ballot &bal)->void{
-//        if (Candidate::DonaldTrump == bal.person){
-//            if (state == State::Faked or state == State::Damaged or state == State::Invalid){
-//                pocetTrump++;
-//            }
-//        } else {
-//            if (state == State::Faked or state == State::Damaged or state == State::Invalid){
-//                pocetBaiden++;
-//            }
-//        }
-//
-//    });
+    auto count = std::for_each(m_orders.begin(), m_orders.end(),
+                  [state, &pocetBaiden, &pocetTrump](const std::pair<std::string, Ballot> &ord)->void{
+                      if (state == ord.second.state and Candidate::DonaldTrump == ord.second.person){
+                          pocetTrump;
+                      } else {
+                          if (state == ord.second.state){
+                              pocetBaiden++;
+                          }
+                  }});
 
     novyMap[Candidate::JoeBiden] = pocetBaiden;
     novyMap[Candidate::DonaldTrump] = pocetTrump;
@@ -79,5 +84,14 @@ std::map<Candidate, long> BallotList::getBallotsCount(const State state){
 /// metoda vraci listky daneho typu: platne, neplatne...
 /// pokud zaznam neni zadny zaznam nalezen, je vyhozena vyjimka - 6b
 std::vector<Ballot> BallotList::getBallots(const State state) throw (std::invalid_argument){
+    std::vector<Ballot> listky;
+
+    auto count = std::for_each(m_orders.begin(), m_orders.end(),
+                               [state, &listky](const std::pair<std::string, Ballot> &ord)->void{
+                                   if (state == ord.second.state){
+                                       listky.push_back(ord.second);
+                                   }});
+
+    return listky;
     throw std::exception();
 }

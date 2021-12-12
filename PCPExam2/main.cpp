@@ -10,8 +10,14 @@ int main(int argc, const char * argv[])
     TestSuite::Suite tests("Test semestralni zkousky C++");
     tests.addTest(new TestPrikladu1);
 
-    BallotList ballot;
-    std::string fileName = "/home/xkudla/Documents/Mendel/PCP/CV/PCPExam2/votes.txt";
+    tests.run();
+    tests.report();
+
+    //    BallotList ballot;
+//    std::string fileName = "/home/xkudla/Documents/Mendel/PCP/CV/PCPExam2/votes.txt";
+//    ballot.loadFile(fileName);
+//    ballot.getBallotsCount(State::Invalid);
+//    ballot.printInfo();
 
 //    Hero* artus = new Hero("Artus");
 //    Weapon* sword = new Weapon("sword", 15);
@@ -21,9 +27,7 @@ int main(int argc, const char * argv[])
 //    artus->printWeapons();
 //
 //    delete artus;
-//    tests.run();
-//    tests.report();
-//
+
     return 0;
 }
 

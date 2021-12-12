@@ -12,13 +12,28 @@ public:
 
     /// otestujte, zda se povedlo vratit zaznamy daneho kandidata - 5 b
     void testCandidate(){
-        BallotList bal;
-        bal.loadFile("/home/xkudla/Documents/Mendel/PCP/CV/PCPExam2/votes.txt");
+        BallotList ballot;
+        std::string fileName = "/home/xkudla/Documents/Mendel/PCP/CV/PCPExam2/votes.txt";
+        ballot.loadFile(fileName);
+        try{
+            test_(ballot.getBallotsCount(State::Invalid).empty() == false);
+        } catch (std::length_error){
+//            fail_("Not empty");
+//            succeed_();
+        }
     }
 
     /// otestujte, zda se korektne vraci listky daneho typu - 5 b
     void testValid(){
-
+            BallotList ballot;
+            std::string fileName = "/home/xkudla/Documents/Mendel/PCP/CV/PCPExam2/votes.txt";
+            ballot.loadFile(fileName);
+            try {
+                test_(ballot.getBallots(State::Invalid).empty() == false);
+            } catch (std::invalid_argument){
+                //            fail_("Not empty");
+                //            succeed_();
+            }
     }
 
 
