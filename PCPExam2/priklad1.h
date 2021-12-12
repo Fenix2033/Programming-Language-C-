@@ -35,6 +35,7 @@ public:
     /// pokud je pri nacteni vyhozena vyjimka, je zpracovana a je vypsaha hlaska
     /// na chybovy vystup - 2b
     BallotList();
+
     /// metoda nacitajici vsechny zaznamy ze souboru - 5b
     /// pozor: jmeno ma vice slov
     /// v pripade, ze soubor neexistuje je vyhozena vyjimka, pouzije vkladaci metodu nize

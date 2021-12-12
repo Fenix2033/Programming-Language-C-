@@ -12,7 +12,8 @@ public:
 
     /// otestujte, zda se povedlo vratit zaznamy daneho kandidata - 5 b
     void testCandidate(){
-
+        BallotList bal;
+        bal.loadFile("/home/xkudla/Documents/Mendel/PCP/CV/PCPExam2/votes.txt");
     }
 
     /// otestujte, zda se korektne vraci listky daneho typu - 5 b
