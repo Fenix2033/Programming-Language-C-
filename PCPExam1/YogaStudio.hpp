@@ -56,7 +56,6 @@ public:
     /// Celkovy pocet muzu deleno celkovy pocet zen.
     float getRatioOfManAndWoman() const;
 
-    std::vector<Lesson> getLesson() const;
     
 };
 

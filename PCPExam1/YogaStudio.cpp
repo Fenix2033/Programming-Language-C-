@@ -25,57 +25,46 @@ void YogaStudio::printTimetable(std::string fileName) {
 
     if (file.is_open()) {
         file << "ID                     ";
-        for (int i = 0; i < m_lessons.size(); i++) {
-            file << "| "  << m_lessons.at(i).getId() << "                              ";
-        }
-        file << std::endl;
-
         file << "name                   ";
-        for (int i = 0; i < m_lessons.size(); i++) {
-            file << "| " << m_lessons.at(i).getName() << "                            ";
-        }
-        file << std::endl;
-
         file << "content                ";
-        for (int i = 0; i < m_lessons.size(); i++) {
-            file << "| " << m_lessons.at(i).getContent() << "                            ";
-        }
-        file << std::endl;
-
-        float time;
         file << "duration  [h]          ";
-        for (int i = 0; i < m_lessons.size(); i++) {
-            time = m_lessons.at(i).getDuration();
-            file << "| " << time / 3600 << " hours" << "                  ";
-        }
+        file << "number of participants ";
         file << std::endl;
-
-
-        file << "number of participants" << " ";
-        for (int i = 0; i < m_lessons.size(); i++) {
-            file << "| " << m_lessons.at(i).getCountParticipants() << "                              ";
-        }
-
-        file << std::endl;
-
+        auto write = std::for_each(m_lessons.begin(), m_lessons.end(),
+                                   [&file](Lesson &les)->void{
+                                       file << les.getId() << "                     ";
+                                       file << les.getName() << "                     ";
+                                       file << les.getContent() << "                     ";
+                                       float time = les.getDuration() / 3600;
+                                       file << time << "                     ";
+                                       file << les.getCountParticipants() << "                     ";
+                                       file << std::endl;
+                                   });
     } else {
-        std::cout << "File is not open" << std::endl;
+        throw std::domain_error("File is not found");
     }
-
-    file.close();
-
+        file.close();
 }
 
 std::vector<Lesson>YogaStudio::getEmptyLessons() const{
+    std::vector <Lesson> empty;
 
     auto foundLesson = std::for_each(m_lessons.begin(), m_lessons.end(),
-                                   [](const Lesson &les)->Lesson
-                            {if (les.getCountParticipants() == 0){
-                                return les;
-                            };});
+                                   [&empty](const Lesson &les)->void
+                            { if (les.getCountParticipants() == 0) {
+                                empty.push_back(les);
+                            }
+                            ;});
+    if (empty.size() == 0){
+        std::cout << "Not empty lesson" << std::endl;
+    }
+
+    return empty;
+
 }
 
 std::vector<Lesson> YogaStudio::getLessonsWithDurationInRange(long min, long max) const{
+    std::vector<Lesson> duration;
 
     long tmpMin = min;
     long tmpMax = max;
@@ -89,10 +78,17 @@ std::vector<Lesson> YogaStudio::getLessonsWithDurationInRange(long min, long max
     assert(max > min);
 
     auto foundLesson = std::for_each(m_lessons.begin(), m_lessons.end(),
-                                        [min, max](const Lesson &les)->Lesson
+                                        [&duration, min, max](const Lesson &les)->void
                                         {if(les.getDuration() > min and les.getDuration() < max){
-                                            return les;
+                                            duration.push_back(les);
                                         }});
+
+    if (duration.size() == 0){
+        std::cout << "Not lesson with duration in range" << std::endl;
+    }
+
+    return duration;
+
 }
 
 // 5 body
@@ -103,15 +99,16 @@ float YogaStudio::getRatioOfManAndWoman() const{
     int male = 0;
     int female = 0;
 
-    for(int i = 0; i < m_lessons.size(); i++){
-        male += m_lessons.at(i).getCountMale();
-        female += m_lessons.at(i).getCountFemale();
-    }
+    auto ratio = std::for_each(m_lessons.begin(), m_lessons.end(),
+            [&male, &female](const Lesson &les)->void{
+        male += les.getCountMale();
+        female += les.getCountFemale();
+    });
 
-//    if (female == 0){
-//        std::cout << "female = 0" << std::endl;
-//        return 0;
-//    }
+    if (female == 0){
+        std::cout << "female = 0" << std::endl;
+        return 0;
+    }
 
     if (male == 0){
         std::cout << "male = 0" << std::endl;
@@ -119,8 +116,4 @@ float YogaStudio::getRatioOfManAndWoman() const{
     }
 
     return male / female;
-}
-
-std::vector<Lesson>  YogaStudio::getLesson() const{
-    return m_lessons;
 }

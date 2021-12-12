@@ -1,5 +1,3 @@
-ID                     | 0                              | 1                              
-name                   | one                            | two                            
-content                | one                            | two                            
-duration  [h]          | 1.55556 hours                  | 1.83333 hours                  
-number of participants | 0                              | 2                              
+ID                     name                   content                duration  [h]          number of participants 
+0                     one                     one                     1                     0                     
+1                     two                     two                     1                     2                     

@@ -13,39 +13,47 @@ class YogaStudioTest:public TestSuite::Test{
 public:
     // 4 body
     void testGetEmptyLessons(){
-//        YogaStudio yoga;
-//        std::vector<Lesson> empty;
-//        Lesson lesson(0, "fsd", "fsd", 3600);
-//        Lesson lesson1(1, "fsd", "fsd", 3600);
-//        yoga.addLesson(lesson);
-//        yoga.addLesson(lesson1);
-//        empty.push_back(lesson);
-//        empty.push_back(lesson1);
-//        test_(yoga.getEmptyLessons() == empty);
+        YogaStudio yoga;
+        Lesson lesson(0, "lesson", "lesson", 5600);
+        Participant tomas{"Tomas", 25, male};
+        yoga.addLesson(lesson);
+        yoga.registerParticipant(0, tomas);
+        try {
+            test_(yoga.getEmptyLessons().empty() == true);
+        } catch (std::length_error) {
+            fail_("Not empty");
+            succeed_();
+        }
     }
     
     // 4 body
     void testGetLessonsWithDurationInRange(){
         YogaStudio yoga;
-        long min = 1000;
-        long max = 2000;
-        test_(max > min);
-
-        Lesson lesson(0, "fsd", "fsd", 1500);
-        std::vector<Lesson> testL;
-        testL.push_back(lesson);
+        Lesson lesson(0, "lesson", "lesson", 5600);
         yoga.addLesson(lesson);
-//        test_(yoga.getLessonsWithDurationInRange(min, max) == lesson);
-
-//        min = 2000;
-//        max = 1000;
-//        test_(max > min);
-
+        try {
+            test_(yoga.getLessonsWithDurationInRange(1000, 6000).empty() == false);
+        } catch (std::length_error) {
+            fail_("Wrong duration");
+            succeed_();
+        }
     }
     
     // 4 body
     void testGetRatioOfManAndWoman() {
-        
+        YogaStudio yoga;
+        Lesson lesson(0, "lesson", "lesson", 5600);
+        Participant tomas{"Tomas", 25, male};
+        Participant anna{"Anna", 25, female};
+        yoga.addLesson(lesson);
+        yoga.registerParticipant(0, tomas);
+        yoga.registerParticipant(0, anna);
+        try {
+            test_(yoga.getRatioOfManAndWoman() == 1);
+        } catch (std::length_error) {
+            fail_("Wrong");
+            succeed_();
+        }
     }
     
     void run(){

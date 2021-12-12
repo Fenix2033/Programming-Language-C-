@@ -39,14 +39,8 @@ int main (int argc, const char * argv[])
     one.addParticipants(tomas);
     one.addParticipants(anna);
 
-    std::cout << one.getCountFemale();
-    std::cout << one.getCountMale();
-
-
-//    std::cout << yoga.getRatioOfManAndWoman() << std::endl;
-
     yoga.printTimetable(fileName);
-    
+
     return 0;
 }
 

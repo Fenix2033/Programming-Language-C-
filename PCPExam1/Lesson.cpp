@@ -74,15 +74,23 @@ void Lesson::addParticipants(Participant participant){
 
 int Lesson::getCountMale() const{
     int male = 0;
-    auto gender = Gender::male;
-    for(int i = 0; i < participants.size(); i++){
-        if (gender == Gender::male) male++;
-    }
+
+    auto countMale = std::for_each(participants.begin(), participants.end(),
+                                   [&male](const Participant &par)->void{
+                                       auto gende = Gender::male;
+                                       if (gende == par.gender) male++;
+    });
+
+    return male;
 }
 
 int Lesson::getCountFemale() const{
     int female = 0;
-    for(int i = 0; i < participants.size(); i++){
-        if (participants.at(i).gender == '1') female++;
-    }
+    auto countMale = std::for_each(participants.begin(), participants.end(),
+                                   [&female](const Participant &par)->void{
+                                       auto gende = Gender::female;
+                                       if (gende == par.gender) female++;
+                                   });
+
+    return female;
 }
