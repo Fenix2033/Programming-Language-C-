@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="zkouska_ZS2021_1T"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zkouska_ZS2021_1T">
+				<Option output="/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/zkouska_ZS2021_1T" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/xkudla/Downloads/21-22Z_1T/."/>
+					<Add directory="/Users/xkudla/Downloads/21-22Z_1T/TestSuite"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 zkouska_ZS2021_1T"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zkouska_ZS2021_1T/fast">
+				<Option output="/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/zkouska_ZS2021_1T" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/xkudla/Downloads/21-22Z_1T/."/>
+					<Add directory="/Users/xkudla/Downloads/21-22Z_1T/TestSuite"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 zkouska_ZS2021_1T/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/xkudla/Downloads/21-22Z_1T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/TestSuite/Suite.cpp">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/TestSuite/Suite.h">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/TestSuite/Test.cpp">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/TestSuite/Test.h">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/main.cpp">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/priklad1.cpp">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/priklad1.h">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/priklad2.cpp">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/priklad2.h">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/tst_priklad1.h">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/votes.txt">
+			<Option target="zkouska_ZS2021_1T"/>
+		</Unit>
+		<Unit filename="/Users/xkudla/Downloads/21-22Z_1T/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

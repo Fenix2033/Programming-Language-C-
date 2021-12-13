@@ -1,0 +1,15 @@
+Accepted, 202012111001, Babis, Jihomoravsky Kraj
+Invalid, 202012111002, Babis, Kraj Vysocina
+Accepted, 202012111002, Babis, Kraj Vysocina
+Damaged, 202012111003, Pavel, Jihomoravsky kraj
+Faked, 202012111003, Pavel, Plzensky kraj
+Faked, 202012111004, Pavel, Plzensky kraj
+Faked, 202012111004, Pavel, Plzensky kraj
+Accepted, 202012111005, Nerudova, New York
+Damaged, 202012111006, Nerudova, Kraj Vysocina
+Accepted, 202012111007, Babis, Kraj Vysocina
+Invalid, 202012111007, Babis, Kraj Vysocina
+Accepted, 202012111008, Babis, Kraj Vysocina
+Damaged, 202012111008, Pavel, Jihomoravsky kraj
+Faked, 202012111008, Pavel, Plzensky kraj
+Faked, 202012111009, Nerudova, Plzensky kraj
