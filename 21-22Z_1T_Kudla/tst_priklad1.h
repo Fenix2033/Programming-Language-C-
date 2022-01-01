@@ -12,19 +12,16 @@ public:
     /// otestujte, zda se povedlo vratit spravnou vysledkovou listinu podle vzoroveho souboru - 5 b
     void testResults(){
         BallotList ballot;
+        std::map<Candidate, long> test;
+        test = ballot.getBallotsCount();
         try {
-            test_(ballot.getBallotsCount().empty() == false);
+            test_(test.empty() == false);
         } catch (std::invalid_argument){
             fail_("Invalid argument");
             succeed_();
         }
 
-        std::map<Candidate, long> test;
-        test = ballot.getBallotsCount();
 
-//        for(std::map<Candidate, long>::iterator it = test.begin(); it != test.end(); it++){
-//            test_(it->second == 0);
-//        }
     }
 
     /// otestujte, zda se korektne vraci validni listky daneho typu z daneho regionu - 5 b
@@ -33,7 +30,7 @@ public:
             std::vector<Ballot> test;
             test = ballot.getBallots(State::Faked, "Plzensky kraj");
             try {
-                test_(test.empty() == true);
+                test_(test.size() == 5);
             } catch (std::length_error){
                 fail_("Lenght error");
                 succeed_();
