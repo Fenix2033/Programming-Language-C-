@@ -6,6 +6,8 @@
 BallotList::BallotList(){
     std::string fileName = "/home/xkudla/Documents/Mendel/PCP/CV/PCPExam2/votes.txt";
     loadFile(fileName);
+    std::map<std::string, Ballot>::iterator it;
+
 }
 
 void BallotList::loadFile(const std::string fileName) throw (std::invalid_argument){
@@ -18,14 +20,8 @@ void BallotList::loadFile(const std::string fileName) throw (std::invalid_argume
         State tState;
         Candidate tPerson;
         while (in >> tVotes >> sState >> tData >> sPerson) {
-            if (sState == "Accepted") tState = State::Accepted;
-            if (sState == "Invalid") tState = State::Invalid;
-            if (sState == "Damaged") tState = State::Damaged;
-            if (sState == "Faked") tState = State::Faked;
-            if (sPerson == "DonaldTrump") tPerson = Candidate::DonaldTrump;
-            if (sPerson == "JoeBiden") tPerson = Candidate::JoeBiden;
-            m_orders.insert(std::pair<std::string, Ballot>(tVotes, Ballot{tState, tPerson, tData}));
-//            insertBallot(sState, sCandidate, tData, tVotes);
+
+            insertBallot(sState, sPerson, tData, tVotes);
         }
     }else{
         throw std::domain_error("soubor neotevren");
@@ -39,21 +35,22 @@ void BallotList::loadFile(const std::string fileName) throw (std::invalid_argume
 void BallotList::insertBallot(const std::string state, const std::string person,
                   const std::string date, const std::string counter){
 
-    std::map<std::string, Ballot> m_orde;
-
-    [state, person, date, counter, &m_orde](Ballot &bal)->void{
+    auto helpBal = [state, person, date, counter]() -> Ballot{
         State tState;
         Candidate tCandidate;
+        Ballot bal;
         if (state == "Accepted") tState = State::Accepted;
-        if (state == "Invalid") tState = State::Invalid;
-        if (state == "Damaged") tState = State::Damaged;
-        if (state == "Faked") tState = State::Faked;
+        else if (state == "Invalid") tState = State::Invalid;
+        else if (state == "Damaged") tState = State::Damaged;
+        else if (state == "Faked") tState = State::Faked;
         if (person == "DonaldTrump") tCandidate = Candidate::DonaldTrump;
-        if (person == "JoeBiden") tCandidate = Candidate::JoeBiden;
-        m_orde.insert(std::pair<std::string, Ballot>(person, Ballot{tState, tCandidate, date}));
+        else if (person == "JoeBiden") tCandidate = Candidate::JoeBiden;
+        bal = {tState, tCandidate, date};
+        return bal;
     };
 
-    m_orders = m_orde;
+
+    m_orders.insert(std::pair<std::string, Ballot>(counter, helpBal()));
 
 }
 
@@ -66,13 +63,13 @@ std::map<Candidate, long> BallotList::getBallotsCount(const State state){
 
     auto count = std::for_each(m_orders.begin(), m_orders.end(),
                   [state, &pocetBaiden, &pocetTrump](const std::pair<std::string, Ballot> &ord)->void{
-                      if (state == ord.second.state and Candidate::DonaldTrump == ord.second.person){
-                          pocetTrump;
-                      } else {
-                          if (state == ord.second.state){
-                              pocetBaiden++;
-                          }
-                  }});
+                      if (state == ord.second.state and Candidate::DonaldTrump == ord.second.person) {
+                          pocetTrump++;
+                      }
+                      else if (state == ord.second.state and Candidate::JoeBiden == ord.second.person){
+                          pocetBaiden++;
+                      }
+                  });
 
     novyMap[Candidate::JoeBiden] = pocetBaiden;
     novyMap[Candidate::DonaldTrump] = pocetTrump;
