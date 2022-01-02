@@ -17,46 +17,40 @@
 /// Pokud cokoliv nesedi, vyhodte vhodnou vyjimku.
 
 Lesson::Lesson(long id, std::string name, std::string content, long duration){
-    long tmpId = id;
-    if (id < 0) tmpId = 0;
-    assert(tmpId >= 0);
 
-    std::regex regular("^[a-z][0-9a-z]*$");
-    std::string tmpName = name;
-    if (!regex_match(name, regular) and name == "") tmpName = "A";
-    assert(tmpName != "");
+    std::regex regular("^[a-zA-Z][0-9a-zA-Z]*$");
 
-    std::string tmpContent = content;
-    if (!regex_match(name, regular) and name == "") tmpContent = "A";
-    assert(tmpContent != "");
-
-    long tmpDuration = duration;
-    if (duration <= 0) tmpDuration = 1;
-    assert(tmpDuration > 0);
-
-    this->id = tmpId;
-    this->name = tmpName;
-    this->content = tmpContent;
-    this->duration = tmpDuration;
+    if (id >= 0 and name != "" and content != "" and duration > 0){
+        assert(id >= 0);
+        assert(name != "");
+        assert(content != "");
+        assert(duration > 0);
+        this->id = id;
+        this->name = name;
+        this->content = content;
+        this->duration = duration;
+    } else {
+        throw std::invalid_argument("Not valid argument");
+    }
 }
 
 long Lesson::getId() const{
-    assert(this->id >= 0);
+
     return this->id;
 }
 
 std::string Lesson::getName() const{
-    assert(this->name != "");
+
     return this->name;
 }
 
 std::string Lesson::getContent() const{
-    assert(this->content != "");
+
     return this->content;
 }
 
 long Lesson::getDuration() const{
-    assert(this->duration > 0);
+
     return this->duration;
 }
 

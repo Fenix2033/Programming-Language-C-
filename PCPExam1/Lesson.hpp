@@ -43,6 +43,7 @@ public:
     std::string getContent() const;
     long getDuration() const;
     void addParticipants(Participant participant);
+
     int getCountParticipants() const;
     std::vector<Participant> getParticipant() const;
     int getCountMale() const;

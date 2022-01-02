@@ -15,15 +15,11 @@ public:
     void testGetEmptyLessons(){
         YogaStudio yoga;
         Lesson lesson(0, "lesson", "lesson", 5600);
-        Participant tomas{"Tomas", 25, male};
         yoga.addLesson(lesson);
-        yoga.registerParticipant(0, tomas);
-        try {
-            test_(yoga.getEmptyLessons().empty() == true);
-        } catch (std::length_error) {
-            fail_("Not empty");
-            succeed_();
-        }
+        test_(yoga.getEmptyLessons().empty() == false);
+        test_(yoga.getEmptyLessons().at(0).getName() == "lesson");
+
+
     }
     
     // 4 body
@@ -31,12 +27,8 @@ public:
         YogaStudio yoga;
         Lesson lesson(0, "lesson", "lesson", 5600);
         yoga.addLesson(lesson);
-        try {
-            test_(yoga.getLessonsWithDurationInRange(1000, 6000).empty() == false);
-        } catch (std::length_error) {
-            fail_("Wrong duration");
-            succeed_();
-        }
+        test_(yoga.getLessonsWithDurationInRange(1000, 6000).empty() == false);
+        test_(yoga.getLessonsWithDurationInRange(6000, 1000).at(0).getDuration() == 5600);
     }
     
     // 4 body
@@ -48,12 +40,8 @@ public:
         yoga.addLesson(lesson);
         yoga.registerParticipant(0, tomas);
         yoga.registerParticipant(0, anna);
-        try {
-            test_(yoga.getRatioOfManAndWoman() == 1);
-        } catch (std::length_error) {
-            fail_("Wrong");
-            succeed_();
-        }
+        test_(yoga.getRatioOfManAndWoman() == 50);
+
     }
     
     void run(){

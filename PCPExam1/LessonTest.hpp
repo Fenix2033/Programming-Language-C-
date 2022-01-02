@@ -9,22 +9,25 @@ class LessonTest:public TestSuite::Test{
 private:
     // 2 bod
     /// Overte, ze pri vytvoreni objektu Lesson se spravnymi parametry se nevyhodi vyjimka.
+
     void testValidParameters(){
-        Lesson lesson(5, "fds", "sdf", 5);
-        test_(lesson.getId() == 5);
-        test_(lesson.getName() == "fds");
-        test_(lesson.getContent() == "sdf");
-        test_(lesson.getDuration() == 5);
+        try {
+            Lesson lesson(5, "fds", "sdf", 5);
+            test_("Valid argument");
+        } catch (std::invalid_argument){
+            fail_("Invalid argument");
+        }
     }
     
     // 2 bodu
     /// Overte, ze pri vytvoreni objektu Lesson s nespravnymi parametry se vyhodi vyjimka.
     void testInvalidParameters(){
-        Lesson lesson(-1, "", "", -5);
-        test_(lesson.getId() == 0);
-        test_(lesson.getName() == "A");
-        test_(lesson.getContent() == "A");
-        test_(lesson.getDuration() == 1);
+        try {
+            Lesson lesson(-1, "111", "", 0);
+            fail_("Invalid argument");
+        } catch (std::invalid_argument){
+            test_("Valid argument");
+        }
     }
     
 public:

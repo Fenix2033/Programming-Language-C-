@@ -17,7 +17,6 @@ void YogaStudio::registerParticipant(long lessonId, Participant participant){
         } else {
             throw std::out_of_range("Lesson not found");
         }
-
 }
 
 void YogaStudio::printTimetable(std::string fileName) {
@@ -49,14 +48,19 @@ void YogaStudio::printTimetable(std::string fileName) {
 std::vector<Lesson>YogaStudio::getEmptyLessons() const{
     std::vector <Lesson> empty;
 
-    auto foundLesson = std::for_each(m_lessons.begin(), m_lessons.end(),
-                                   [&empty](const Lesson &les)->void
-                            { if (les.getCountParticipants() == 0) {
-                                empty.push_back(les);
-                            }
-                            ;});
-    if (empty.size() == 0){
-        std::cout << "Not empty lesson" << std::endl;
+    auto foundLesson = m_lessons.begin();
+
+    while (foundLesson != m_lessons.end()){
+        foundLesson = std::find_if(foundLesson, m_lessons.end(),
+                                   [](const Lesson &les) -> bool{
+                                       return les.getCountParticipants() == 0;
+                                   });
+
+        if (foundLesson != m_lessons.end()){
+           empty.push_back(*foundLesson);
+        }
+
+        foundLesson++;
     }
 
     return empty;
@@ -66,25 +70,27 @@ std::vector<Lesson>YogaStudio::getEmptyLessons() const{
 std::vector<Lesson> YogaStudio::getLessonsWithDurationInRange(long min, long max) const{
     std::vector<Lesson> duration;
 
-    long tmpMin = min;
-    long tmpMax = max;
     if (max < min){
         long a = max;
         max = min;
         min = a;
-        tmpMax = max;
-        tmpMin = min;
     }
+
     assert(max > min);
 
-    auto foundLesson = std::for_each(m_lessons.begin(), m_lessons.end(),
-                                        [&duration, min, max](const Lesson &les)->void
-                                        {if(les.getDuration() > min and les.getDuration() < max){
-                                            duration.push_back(les);
-                                        }});
+    auto foundLesson = m_lessons.begin();
 
-    if (duration.size() == 0){
-        std::cout << "Not lesson with duration in range" << std::endl;
+    while (foundLesson != m_lessons.end()){
+        foundLesson = std::find_if(foundLesson, m_lessons.end(),
+                                    [min, max](const Lesson &les) -> bool{
+                                        return les.getDuration() > min and les.getDuration() < max;
+                                    });
+
+        if (foundLesson != m_lessons.end()){
+            duration.push_back(*foundLesson);
+        }
+
+        foundLesson++;
     }
 
     return duration;
@@ -106,14 +112,12 @@ float YogaStudio::getRatioOfManAndWoman() const{
     });
 
     if (female == 0){
-        std::cout << "female = 0" << std::endl;
-        return 0;
+        return 100;
     }
 
     if (male == 0){
-        std::cout << "male = 0" << std::endl;
         return 0;
     }
 
-    return male / female;
+    return 100 / (male + female) * male;
 }

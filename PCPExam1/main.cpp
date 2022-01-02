@@ -18,29 +18,6 @@ int main (int argc, const char * argv[])
 
 
 
-    Lesson one (0, "one", "one", 5600);
-    Lesson two (1, "two", "two", 6600);
-
-    Participant tomas{"Tomas", 25, male};
-    Participant anna{"Anna", 30, female};
-
-    YogaStudio yoga;
-
-    yoga.addLesson(one);
-    yoga.addLesson(two);
-    yoga.registerParticipant(1, tomas);
-    yoga.registerParticipant(1, anna);
-
-    yoga.getEmptyLessons();
-    int min = 3000;
-    int max = 6000;
-    yoga.getLessonsWithDurationInRange(min, max);
-
-    one.addParticipants(tomas);
-    one.addParticipants(anna);
-
-    yoga.printTimetable(fileName);
-
     return 0;
 }
 
