@@ -37,7 +37,7 @@ protected:
     /// zbrane: pomoci inteligentnich ukazatelu vyreste, aby se hrdinovi mohl predat mec nebo jina zbran do seznamu
     /// tuto zbran musi vlastni vyhradne hrdina, pokud si ji k sobe ulozi. Nesmi existovat situace, ze ukazatel na
     /// zbran ma jak hrdina, tak "nekdo" kdo ji hrdinovi predal - spravna definicie atributu (3 body)
-    // ??? m_weapons;
+    std::vector<Weapon> m_weapons;
 
 public:
     /// Konstruktor vytvarejici hrdinu. (1 bod)
@@ -48,7 +48,7 @@ public:
 
 private:
     /// Pridani zbrane do seznamu zbrani  (4 body)
-    //void addWeapon(???);
+    void addWeapon(Weapon weapon);
 
     /// Vypise jmena zbrani na obrazovku (4 body)
     void printWeapons();

@@ -1,19 +1,23 @@
 #include "priklad2.h"
 
-/// Konstruktor vytvarejici hrdinu. (1 bod)
 Hero::Hero(const std::string name){
-
+    m_name = name;
 }
 
-/// Destruktor smaze zbran vlastnenou hrdinou (3 body)
+/// Destruktor (3 body)
 Hero::~Hero(){
-
+    m_weapons.erase(m_weapons.begin(), m_weapons.end());
 }
 
-/// Pridani zbrane do seznamu zbrani  (4 body)
-//void Hero::addWeapon(???){}
+/// Pridani zbrane do seznamu zbrani (4 bodu)
+void Hero::addWeapon(Weapon weapon){
+    Weapon wep = std::move(weapon);
+    m_weapons.push_back(wep);
+}
 
-/// Vypise jmena zbrani na obrazovku (4 body)
+/// Vypise jmena zbrani na obrazovku (3 body)
 void Hero::printWeapons(){
-
+    for (int i = 0; i < m_weapons.size(); i++){
+        std::cout << m_weapons.at(i).getName() << std::endl;
+    }
 }
