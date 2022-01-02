@@ -10,21 +10,25 @@ private:
     // 2 bod
     /// Overte, ze pri vytvoreni objektu Guest se spravnymi parametry se nevyhodi vyjimka.
     void testValidParameters(){
-//        Guest guest(0, "Tomas", 80, "Covid19");
-//        test_(guest.getID() == 0);
-//        test_(guest.getName() == "Tomas");
-//        test_(guest.getAge(80) == 80);
-//        test_(guest.getDoctorMessage("Covid19") == true);
+        try {
+            Guest guest(0, "Tomas", 80, "Covid19");
+            test_("Valid argument");
+        } catch (std::invalid_argument){
+            fail_("Invalid argument");
+        }
+
+
     }
     
     // 2 bodu
     /// Overte, ze pri vytvoreni objektu Guest s nespravnymi parametry se vyhodi vyjimka.
     void testInvalidParameters(){
-//        Guest guest(-1, "", 0, "19");
-//        test_(guest.getID() == 0);
-//        test_(guest.getName() == "A");
-//        test_(guest.getAge(0) == 1);
-//        test_(guest.getDoctorMessage("19") == true);
+        try {
+            Guest guest(-5, "", 0, "Covid19");
+            fail_("Invalid argument");
+        } catch (std::invalid_argument){
+            test_("Valid argument");
+        }
     }
     
 public:

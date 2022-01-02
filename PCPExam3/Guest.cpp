@@ -21,52 +21,33 @@
 /// Zajistete odchyceni nasledujicich formatu:
 /// covid19, covid2019, covid 19, covid 2019 ... a to same s ruznou velikosti pismen
 Guest::Guest(long id, std::string name, int age, std::string doctorsMessage){
-        long tmpId = id;
-        if (id < 0) tmpId = 0;
-        assert(tmpId >= 0);
 
-        std::string tmpName = name;
-        if (name == "") tmpName = "A";
-        assert(tmpName != "");
+            if (id >= 0 and name != "" and age > 0){
 
-        int tmpAge = age;
-        if (age <= 0) age = 1;
+                assert(id >= 0);
+                assert(name != "");
+                assert(age > 0);
+                std::regex regular("^[a-zA-Z][0-9a-zA-Z]*$");
+                if (age < 18) this->hasChildDiscount = true;
+                else this->hasChildDiscount = false;
+                if (doctorsMessage != "" and std::regex_match(name, regular)) this->hasCovid = true;
+                else this->hasCovid = false;
+                this->id = id;
+                this->name = name;
 
-//        assert(tmpAge > 0);
-
-        if (age >= 80) this->hasChildDiscount = true;
-
-        bool reg;
-        std::regex regular("^[a-zA-Z][0-9a-zA-Z]*$");
-        std::string tmpMessage = doctorsMessage;
-        if (!std::regex_match(doctorsMessage, regular) and name == "") tmpMessage = "N";
-        if (std::regex_match (doctorsMessage, regular)) this->hasCovid = true; reg = true;
-        assert(reg == true);
-
-        this->id = tmpId;
-        this->name = tmpName;
-
+            } else {
+                throw std::invalid_argument("Not valid argument");
+            }
 }
 
-//long Guest::getID() const{
-//    assert(this->id >= 0);
-//    return this->id;
-//}
+bool Guest::getCovid() const {
+    return hasCovid;
+}
 
-//std::string Guest::getName() const{
-//    assert(this->name != "");
-//    return this->name;
-//}
+bool Guest::getSell() const{
+    return hasChildDiscount;
+}
 
-//int Guest::getAge(int age) const{
-//    assert(age > 0);
-//    return age;
-//}
-
-//bool Guest::getDoctorMessage(std::string doctorMessage) const{
-//    std::regex regular("^[a-zA-Z][0-9a-zA-Z]*$");
-//    bool reg;
-//    if (std::regex_match (doctorMessage, regular)) reg = true;
-//    assert (reg == true);
-//    return reg;
-//}
+std::string Guest::getName() const{
+    return name;
+}
